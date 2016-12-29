@@ -1,5 +1,3 @@
-# Tutorial_for_Bill
-
 这边文档介绍了Seeed文档系统以及如何写或者修改一篇文档。因为这次只是修改文档，文章里有一些内容这次暂时用不上，要等以后要你们要从头写一篇新文档以及自己上传到文档系统才需要看，我都标注出来了。
 
 ## 主要步骤
@@ -69,6 +67,8 @@ git clone https://github.com/SeeedDocument/Seeed-WiKi
 
 1.	在github建立该文档的仓库。文档以及和文档相关的资料都会储存在那里。
 
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/%E5%88%9B%E5%BB%BAgithub%E4%BB%93%E5%BA%93.png)
+
 2.	将仓库拷贝到本地。（方法同拷贝Seeed-Wiki的仓库，只是链接要换成你新建立的这个仓库的链接）。我们创建的仓库的链接是https://github.com/SeeedDocument/Wifi_Shield_v1.0，所以
 ```
 git clone https://github.com/SeeedDocument/Wifi_Shield_v1.0
@@ -90,7 +90,8 @@ git push origin master
 ```
 git clone 文档在github的链接
 ```
-将文档拷贝到本地后，你就可以用Markdown编辑器将文档打开了，我软件用的那个叫}Atom"，配合在线编辑器[马克飞象](https://maxiang.io/#)很多人会用Markdown Pad, 具体要看你的电脑是什么操作系统。下面这篇文章介绍的很全面，你可以根据自己的需求和实际情况选一个合适的编辑器：[好用的Markdown编辑器一览](http://www.williamlong.info/archives/4319.html)
+将文档拷贝到本地后，你就可以用Markdown编辑器将文档打开了，我软件用的那个叫}Atom"，配合在线编辑器[马克飞象](https://maxiang.io/#)很多人会用Markdown Pad, 具体要看你的电脑是什么操作系统。下面这篇文章介绍的很全面，你可以根据自己的需求和实际情况选一个合适的编辑器。
+- [好用的Markdown编辑器一览](http://www.williamlong.info/archives/4319.html)
 
 至于Markdown的介绍，可以参考这里：：[认识与入门Markdown](http://sspai.com/25137)。或者通过别搜索引擎了解更多关于Markdown的知识。这些都不是很难，很快就可以上手。
 
@@ -152,13 +153,10 @@ surveyurl: https://www.research.net/r/G1-8_Water_Flow_Sensor（问卷调查的�
 sku:   113030003（产品的sku）
 ---
 ```
-
 添加这些内容主要的目的是只通过一句指令，可以将文档编译成site文件的同时，在yml目录文件里自动添加该文档的信息。指令是：
-
 ```
 bash build.sh
 ```
-
 这个步骤和mkdocs官网说的使用"Mkdocs build"指令生成site文件有点不一样。因为"bash build.sh" 执行后么会自动执行“mkdocs build"指令。由于第一次使用，上面这一段解释你可能会看不懂，不过没关系，指令你也暂时用不上，你只要知道在文当前加那一段固定内容很重要就可以了。
 
 **问卷调查**
@@ -169,17 +167,36 @@ bash build.sh
 
 - 首先登陆Survey Monkey的网站，因为这次不用生成问卷，账号密码我就先不写在这里了。
 - 登陆之后，应该可以看到下面这个界面，选"Create Survey"
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/Create%20Survey.png)
+
 - 选择“Copy existing survey”
-- 这时候会出现一些Survey让你选择，每次出现的都不一样，你随便选一个就可以了。
+
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/Copy%20existing%20survey.png)
+
+- 这时候会出现一些Survey让你选择，每次出现的都不一样，你随便选一个就可以了。我这次选的是Grove - Base Shield for IOIO-OTG
 - 选择“Copy Survey“
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/copy%20survey.png)
+
 - 因为是Copy过来的，所以要改一下标题。把鼠标移到标题的区域，会出现“Edit”的字样，选择“Edit”。然后改成新的文档的标题。
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/Edit.png)
+
 - 改完标题后，选择“Next”
+
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/next.png)
+
 - 选择“Get Web Link”
 - 选择“Customize”修改Survey的链接，把后缀修改成产品的名字
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/Customize%201.png)
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/customize-2.png)
 - 选择“Show advanced Options” ，下面会增加一些额外的选项
-- 选择“Survey End Page”，然后在三个选项中选中间那个，填上这个链接：http://wiki.seeed.cc/survey_end/。这个步骤的作用是让用户填完Survey 之后能显示我们自己定义的内容，而不是Survey Monkey的广告。
-- 然后再把最上面那个刚才修改过的Survey的链接Copy一下就可以了。
 
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/show%20advance%20options.png)
+
+- 选择“Survey End Page”，然后在三个选项中选中间那个，填上这个链接：http://wiki.seeed.cc/survey_end/。这个步骤的作用是让用户填完Survey 之后能显示我们自己定义的内容，而不是Survey Monkey的广告。
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/Survey%20end%20page.png)
+
+- 然后再把最上面那个刚才修改过的Survey的链接Copy一下就可以了。
+![](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/Survey%E7%9A%84%E9%93%BE%E6%8E%A5.png)
 
 步骤二：加了这些内容以后，就可以写文档的正文了 ，一般一篇文档会包含以下内容。
 
