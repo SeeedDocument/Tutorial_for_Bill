@@ -54,7 +54,7 @@ git clone https://github.com/SeeedDocument/Seeed-WiKi
 ```
 - 打开Seeed-WiKi的文件夹，你可以看到如下的内容
 
- [Seeed-WiKi文件夹的截图]
+![Seeed-WiKi文件夹的截图](https://github.com/SeeedDocument/Tutorial_for_Bill/raw/master/res/Seeed%20Wiki%20%E6%96%87%E4%BB%B6%E5%A4%B9.png)
 
 其中**Docs**用于存放所有我们想要在网页上显示的文档的Markdown文件。以后每次新写的Markdown文件，都要放到这个Docs文件夹里。
 
